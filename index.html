@@ -21,13 +21,14 @@ body{
   font-family:'Inter',sans-serif;
   background:var(--bg);
   height:100vh;
-  overflow:hidden; /* horizontal only */
+  overflow:hidden;
   display:flex;
   flex-direction:column;
 }
 
+/* HEADER */
 .header{
-  padding:48px 72px 28px;
+  padding:48px 72px 0px;
 }
 
 .logo{
@@ -37,6 +38,7 @@ body{
   color:#fff;
   letter-spacing:-2px;
   text-transform:lowercase;
+  margin-bottom:32px;
 }
 
 /* LAYOUT */
@@ -44,7 +46,7 @@ body{
   flex:1;
   display:flex;
   gap:34px;
-  padding:28px 72px 72px;
+  padding:0px 72px 72px;
   overflow-x:auto;
   overflow-y:hidden;
   scroll-snap-type:x mandatory;
@@ -61,7 +63,7 @@ body{
   position:relative;
   transition:0.2s ease;
   overflow:hidden;
-  border-radius:0; /* no-radius */
+  border-radius:24px;
   border:0;
   scroll-snap-align:start;
 }
@@ -76,7 +78,6 @@ body{
 .intro-card{
   background:rgba(255,255,255,0.08);
   backdrop-filter:blur(16px) saturate(140%);
-  -webkit-backdrop-filter:blur(16px) saturate(140%);
   color:white;
 }
 
@@ -145,42 +146,17 @@ body{
     linear-gradient(90deg, rgba(185,90,255,0.60) 1px, transparent 1px);
 }
 
-/* NEON HIGHLIGHT BLOCKS */
+/* NEON TAGS */
 .highlight-yellow{ background:#EFFF7A; padding:4px 8px; }
 .highlight-blue{ background:#BDF2FF; padding:4px 8px; }
 .highlight-pink{ background:#FF73DF; padding:4px 8px; }
 
+/* CARD CONTENT */
 .card-meta{font-size:15px;color:#444;margin-bottom:10px;}
-
-.card-title{
-  font-size:30px;
-  font-weight:700;
-  margin-bottom:10px;
-  line-height:1.3;
-}
-
-.card-type{
-  background:white;
-  padding:8px 14px;
-  border-radius:12px;
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:16px;
-}
-
-.card-desc{
-  font-size:17px;
-  line-height:1.7;
-  margin-bottom:18px;
-  color:#222;
-}
-
-.divider{
-  height:1px;
-  background:rgba(0,0,0,0.15);
-  margin:20px 0;
-}
-
+.card-title{font-size:30px;font-weight:700;margin-bottom:10px;line-height:1.3;}
+.card-type{background:white;padding:8px 14px;border-radius:12px;font-size:13px;font-weight:700;margin-bottom:16px;}
+.card-desc{font-size:17px;line-height:1.7;margin-bottom:18px;color:#222;}
+.divider{height:1px;background:rgba(0,0,0,0.15);margin:20px 0;}
 .card-skills{font-size:14px;color:#333;}
 .skills-label{font-weight:700;margin-bottom:6px;}
 
@@ -199,15 +175,8 @@ body{
 .view-link::after{content:" →";}
 
 .card-badge{
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  background:#000;
-  color:white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-weight:700;
+  width:48px;height:48px;border-radius:50%;background:#000;color:white;
+  display:flex;justify-content:center;align-items:center;font-weight:700;
 }
 </style>
 </head>
@@ -233,7 +202,11 @@ body{
 
     <div class="intro-links">
       <a href="https://www.linkedin.com/in/bharath-salla-b4930a399/" target="_blank">LinkedIn</a>
-      <a href="https://drive.google.com/file/d/1KxdG-Wn1JCxKi1lUKKycznxfvdShZq2g/view" target="_blank">Resume</a>
+
+      <!-- UPDATED RESUME LINK -->
+      <a href="https://docs.google.com/document/d/1P6ihRxO_Kp1Byd029WKtrizdYX-Cx544/edit?usp=sharing&ouid=108460924077483427014&rtpof=true&sd=true" 
+         target="_blank">Resume</a>
+
       <a href="mailto:bharathuxdeisgner@gmail.com">Contact</a>
     </div>
 
@@ -247,39 +220,37 @@ body{
       <span class="highlight-yellow">Enterprise</span> Operations & Real-time Systems
     </div>
     <div class="card-type">Ground-up Rebuild</div>
-    <div class="card-desc">
-      Lifted first-pass resolution 30% and halved handling time via unified verification flow.
-    </div>
+    <div class="card-desc">Lifted first-pass resolution 30% and halved handling time.</div>
     <div class="divider"></div>
-    <div class="card-skills">
-      <span class="skills-label">Skills</span> Dashboard design · Workflow optimization
-    </div>
+    <div class="card-skills"><span class="skills-label">Skills</span> Dashboard design · Workflow optimization</div>
     <div class="card-footer">
+
+      <!-- UPDATED VERIZON LINK -->
       <a class="view-link" target="_blank"
-        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=761-180356">
+        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=761-180356&t=vmCrk0jJ3avFzhoH-8&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=617%3A121933&hide-ui=1">
         View Case Study
       </a>
+
       <div class="card-badge">V</div>
     </div>
   </div>
 
-  <!-- CARD 3 -->
+  <!-- CARD 3 – UHG -->
   <div class="card card-3">
     <div class="card-meta">UnitedHealth Group — Smart EOB</div>
     <div class="card-title">Healthcare AI & Claims</div>
     <div class="card-type">New Product</div>
-    <div class="card-desc">
-      Automated 5K+ EOBs weekly and reduced load 25%.
-    </div>
+    <div class="card-desc">Automated 5K+ EOBs weekly.</div>
     <div class="divider"></div>
-    <div class="card-skills">
-      <span class="skills-label">Skills</span> AI/ML · Document processing · Usability testing
-    </div>
+    <div class="card-skills"><span class="skills-label">Skills</span> AI/ML · Usability testing</div>
     <div class="card-footer">
+
+      <!-- UPDATED UHG LINK -->
       <a class="view-link" target="_blank"
-        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=1173-180877">
+        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=1173-180877&t=5DISdoIhyDoKyE3L-8&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=617%3A121933&hide-ui=1">
         View Project
       </a>
+
       <div class="card-badge">U</div>
     </div>
   </div>
@@ -287,37 +258,39 @@ body{
   <!-- CARD 4 – HDFC -->
   <div class="card card-4 grid">
     <div class="card-meta">HDFC Bank — Money Transfer Redesign</div>
-    <div class="card-title">
-      <span class="highlight-blue">Fintech</span> & Digital Banking
-    </div>
+    <div class="card-title"><span class="highlight-blue">Fintech</span> & Digital Banking</div>
     <div class="card-type">Core Overhaul</div>
     <div class="card-desc">Cut transaction time 22%.</div>
     <div class="divider"></div>
-    <div class="card-skills">
-      <span class="skills-label">Skills</span> Mobile-first design · Interaction design
-    </div>
+    <div class="card-skills"><span class="skills-label">Skills</span> Mobile-first · Interaction design</div>
     <div class="card-footer">
+
+      <!-- UPDATED HDFC LINK -->
       <a class="view-link" target="_blank"
-        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=744-122470">
+        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=744-122470&t=d85fbExzbRU0fNtQ-8&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=617%3A121933&hide-ui=1">
         View Work
       </a>
+
       <div class="card-badge">H</div>
     </div>
   </div>
 
-  <!-- CARD 5 -->
+  <!-- CARD 5 – CLARISIGHTS -->
   <div class="card card-5">
     <div class="card-meta">Clarisights</div>
     <div class="card-title">Marketing Analytics</div>
     <div class="card-type">Feature Revamp</div>
     <div class="card-desc">Rebuilt Custom Dimensions for faster metrics.</div>
     <div class="divider"></div>
-    <div class="card-skills"><span class="skills-label">Skills</span> Information architecture</div>
+    <div class="card-skills"><span class="skills-label">Skills</span> Information Architecture</div>
     <div class="card-footer">
+
+      <!-- UPDATED CLARISIGHTS LINK -->
       <a class="view-link" target="_blank"
-        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=2503-184255">
+        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=2503-184255&t=eemNlOdAk3W0hjKs-8&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1330%3A199755&hide-ui=1">
         Case Study
       </a>
+
       <div class="card-badge">C</div>
     </div>
   </div>
@@ -325,18 +298,19 @@ body{
   <!-- CARD 6 – SCALEXP -->
   <div class="card card-6 grid">
     <div class="card-meta">ScaleXP</div>
-    <div class="card-title">
-      <span class="highlight-pink">Financial</span> Analytics
-    </div>
+    <div class="card-title"><span class="highlight-pink">Financial</span> Analytics</div>
     <div class="card-type">New Capability</div>
-    <div class="card-desc">Built time-series engine & metrics repository.</div>
+    <div class="card-desc">Time-series engine & metrics repository.</div>
     <div class="divider"></div>
-    <div class="card-skills"><span class="skills-label">Skills</span> Data modeling</div>
+    <div class="card-skills"><span class="skills-label">Skills</span> Data Modeling</div>
     <div class="card-footer">
+
+      <!-- UPDATED SCALEXP LINK -->
       <a class="view-link" target="_blank"
-        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=2504-288201">
+        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=2504-288201&t=N2C3TYsj3eCpOiXN-8&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1330%3A199755&hide-ui=1">
         Project Link
       </a>
+
       <div class="card-badge">S</div>
     </div>
   </div>
@@ -346,30 +320,32 @@ body{
     <div class="card-meta">SmartBeings</div>
     <div class="card-title">Voice AI Platform</div>
     <div class="card-type">Platform Launch</div>
-    <div class="card-desc">Built node-based conversation engine.</div>
+    <div class="card-desc">Node-based conversation engine.</div>
     <div class="divider"></div>
     <div class="card-skills"><span class="skills-label">Skills</span> Flow mapping</div>
     <div class="card-footer">
+
+      <!-- UPDATED SMARTBEINGS LINK -->
       <a class="view-link" target="_blank"
-        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=2504-392089">
+        href="https://www.figma.com/proto/DjyzJKOjUe8uf9330m49NW/Portfolio?node-id=2504-392089&t=ovWIllswiqWIYuuH-8&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1330%3A199755&hide-ui=1">
         View Project
       </a>
+
       <div class="card-badge">S</div>
     </div>
   </div>
 
 </div>
 
-<!-- INSTANT HOVER SOUND — ALWAYS WORKS -->
+<!-- SOUND -->
 <script>
-// STEP 1: Unlock autoplay by playing muted first
 window.addEventListener("load", () => {
   const unlockAudio = document.getElementById("unlocked");
   unlockAudio.volume = 0;
   unlockAudio.play().catch(()=>{});
 });
 
-// STEP 2: Hover sound (no delay)
+// Hover sound
 document.querySelectorAll(".card").forEach(card=>{
   card.addEventListener("pointerenter", ()=>{
     const fx = new Audio("click.mp3");
